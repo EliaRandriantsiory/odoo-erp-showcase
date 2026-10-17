@@ -1,69 +1,101 @@
-# Odoo ERP — Personnalisation métier et infrastructure
+# Odoo ERP — Un outil de gestion adapté aux besoins d’une entreprise
 
-> Adapter Odoo 18 Community aux processus d'une entreprise et organiser son exploitation avec Docker et PostgreSQL.
+**En bref :** ce projet présente comment un logiciel de gestion d’entreprise peut être adapté aux façons de travailler d’une organisation.
 
-**Domaines :** ERP · Développement Python · Processus métier · Infrastructure Linux
+[English version below](#english-version)
 
-## Le besoin
+## Le projet
 
-Une entreprise a besoin de relier ses opérations commerciales, sa facturation et ses documents métier dans un même outil. L'enjeu est d'adapter un ERP existant à ses règles de fonctionnement tout en conservant la cohérence des données et des droits d'accès.
+Une entreprise utilise souvent plusieurs documents et méthodes pour suivre ses ventes, ses produits, ses factures et ses livraisons. Ce projet montre comment rassembler ces activités dans un outil commun, puis l’adapter aux règles de l’entreprise.
 
-Ce projet associe des extensions Odoo et une infrastructure conteneurisée. La présentation porte sur les capacités du projet ; elle ne constitue pas une démonstration publique de l'environnement client.
+Il s’appuie sur Odoo, un logiciel de gestion déjà existant, auquel des fonctions complémentaires sont ajoutées selon les besoins.
 
-## Périmètre de réalisation
+## Quels besoins cela aide-t-il à couvrir ?
 
-- Personnalisation d'Odoo 18 Community avec des modules métier.
-- Adaptation des écrans, des champs produits et des documents.
-- Gestion des restrictions d'accès et des menus selon les responsabilités.
-- Organisation du déploiement, des sauvegardes, de la restauration et des mises à jour.
+- Retrouver les informations commerciales au même endroit.
+- Adapter les documents de vente et de livraison aux habitudes de l’entreprise.
+- Organiser les informations sur les produits.
+- Définir ce que chaque personne peut consulter ou modifier selon son rôle.
+- Faciliter certaines opérations de suivi, de maintenance et de sauvegarde.
 
-## Fonctionnalités représentatives
+## Exemples de fonctions présentées
 
-| Domaine | Fonctionnalités |
+| Besoin | Ce que l’outil permet de présenter |
 |---|---|
-| Gestion commerciale | Adaptation du parcours devis, facturation et livraison |
-| Produits | Champs complémentaires et spécifications produits |
-| Documents | Personnalisation des rapports et documents commerciaux |
-| Finance | Exports financiers et adaptations des traitements métier |
-| Accès | Restrictions de menus et droits selon les profils |
-| Exploitation | Scripts de sauvegarde, restauration et mise à jour |
+| Suivre les ventes | Un parcours adapté pour les devis, les factures et les livraisons |
+| Décrire les produits | Des informations supplémentaires pour mieux identifier les articles |
+| Préparer les documents | Des documents commerciaux adaptés aux besoins de l’entreprise |
+| Organiser les accès | Des accès différents selon les responsabilités |
+| Préserver les informations | Des procédures de sauvegarde et de remise en service |
 
-Les extensions spécifiques complètent les fonctions natives d'Odoo et les modules communautaires intégrés. Cette distinction permet de valoriser le travail d'adaptation sans attribuer au projet le développement du socle ERP.
+Les fonctions exactes dépendent de la configuration choisie pour chaque entreprise.
 
-## Architecture
+## À qui ce projet peut-il être utile ?
 
-| Couche | Technologie et responsabilité |
-|---|---|
-| Application | Odoo 18 Community et extensions Python |
-| Données | PostgreSQL 16 |
-| Exécution | Docker et Docker Compose |
-| Accès web | Nginx, reverse proxy HTTPS |
-| Persistance | Volumes pour les données et les pièces jointes |
-| Maintenance | Scripts d'exploitation et documentation |
+- Aux entreprises qui souhaitent adapter leur outil de gestion à leurs méthodes de travail.
+- Aux responsables qui veulent mieux organiser les informations commerciales.
+- Aux équipes qui ont besoin de documents cohérents et d’accès adaptés à chaque rôle.
 
-La séparation entre application, base de données et reverse proxy permet de gérer chaque service distinctement. La persistance des pièces jointes complète celle de la base de données.
+## Ce que ce projet illustre
 
-## Points d'ingénierie
+Ce projet illustre une démarche qui part des besoins d’une entreprise, puis adapte un logiciel de gestion et son environnement de fonctionnement. Il s’agit d’une présentation de réalisation, et non d’un service prêt à être utilisé directement par le public.
 
-- **Étendre l'existant :** privilégier les mécanismes de modules Odoo pour adapter les comportements.
-- **Respecter les responsabilités :** traduire les profils métier en règles d'accès.
-- **Préserver les données :** traiter la base et les fichiers associés dans les opérations de maintenance.
-- **Documenter l'exploitation :** expliciter les étapes de restauration et de mise à jour.
+## État du projet
 
-## Ce que ce projet démontre
-
-La capacité à relier un besoin opérationnel à une solution ERP, puis à prendre en charge son environnement technique : développement Python, intégration de modules, PostgreSQL, conteneurisation et administration Linux.
-
-L'apport fonctionnel est une gestion centralisée adaptée aux usages de l'entreprise. Aucun gain chiffré ni niveau de disponibilité n'est revendiqué dans cette présentation.
+Ce dépôt est une **présentation de portfolio**. Il ne contient pas l’application complète ni de données réelles d’entreprise. Il ne s’agit pas d’une installation prête à l’emploi.
 
 ## À propos
 
 Projet présenté par [Elia Randriantsiory](https://github.com/EliaRandriantsiory).
 
-Ce dépôt est une **présentation de portfolio**. Il ne contient pas le code source de l'application, ni de données métier, de configuration de production ou d'identifiants. Les technologies tierces restent la propriété de leurs auteurs respectifs.
+---
 
-### Autres réalisations
+## English version
 
-- [Odoo ERP — Personnalisation métier](https://github.com/EliaRandriantsiory/odoo-erp-showcase)
-- [RNT Server Manager — Administration Linux](https://github.com/EliaRandriantsiory/rnt-server-manager-showcase)
-- [Fanavotana — Plateforme communautaire](https://github.com/EliaRandriantsiory/fanavotana-showcase)
+# Odoo ERP — Business management adapted to a company's needs
+
+**In brief:** this project shows how an existing business management tool can be adapted to the way an organization works.
+
+## About the project
+
+Businesses often use different documents and methods to keep track of sales, products, invoices, and deliveries. This project shows how these activities can be brought together in one tool and adjusted to a company's working rules.
+
+It is based on Odoo, an existing business management application, with additional functions added to meet specific needs.
+
+## Which needs can it help address?
+
+- Keep business information together in one place.
+- Adapt sales and delivery documents to the company's practices.
+- Organize product information.
+- Decide what each person can view or change according to their role.
+- Make certain tracking, maintenance, and backup tasks easier.
+
+## Examples of the functions presented
+
+| Need | What the tool demonstrates |
+|---|---|
+| Follow sales | An adapted process for quotations, invoices, and deliveries |
+| Describe products | Additional information to identify items more clearly |
+| Prepare documents | Business documents adapted to the company's needs |
+| Organize access | Different access levels based on responsibilities |
+| Protect information | Backup and recovery procedures |
+
+The exact functions depend on how the tool is configured for each business.
+
+## Who may find this project useful?
+
+- Businesses looking to adapt their management tool to their working methods.
+- Managers who want to organize business information more clearly.
+- Teams that need consistent documents and access suited to each role.
+
+## What this project demonstrates
+
+It demonstrates an approach that starts with a company's needs and then adapts a business management application and the environment it runs in. This is a project showcase, not a public service ready for immediate use.
+
+## Project status
+
+This repository is a **portfolio presentation**. It does not contain the complete application or real business data, and it is not a ready-to-use installation.
+
+## About
+
+Presented by [Elia Randriantsiory](https://github.com/EliaRandriantsiory).
